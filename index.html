@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siddhesh Ram Krishnachandran - AI/ML Engineer & Data Scientist Portfolio">
+    <meta name="author" content="Siddhesh Ram Krishnachandran">
     <title>Siddhesh Ram Krishnachandran - Portfolio</title>
     <style>
         * {
@@ -58,7 +60,7 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* Navigation with bento-style */
+        /* Navigation */
         nav {
             position: fixed;
             top: 20px;
@@ -119,7 +121,7 @@
             width: 100%;
         }
 
-        /* Hero with magnetic cursor effect */
+        /* Hero */
         .hero {
             height: 100vh;
             display: flex;
@@ -146,10 +148,8 @@
             -webkit-text-fill-color: transparent;
             opacity: 0;
             animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-            position: relative;
         }
 
-        /* Animated gradient text */
         .gradient-text {
             background: linear-gradient(135deg, #ffffff, #d4d4d8, #ffffff);
             background-size: 200% auto;
@@ -199,8 +199,7 @@
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
+            display: inline-block;
         }
 
         .cta-primary {
@@ -226,109 +225,13 @@
             border-color: rgba(255, 255, 255, 0.3);
         }
 
-        /* Bento Grid Layout */
+        /* Sections */
         section {
             padding: 120px 60px;
             position: relative;
             z-index: 2;
         }
 
-        .bento-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .bento-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 32px;
-            padding: 48px;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(20px);
-        }
-
-        .bento-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 32px;
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .bento-card:hover::before {
-            opacity: 1;
-        }
-
-        .bento-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
-        }
-
-        .bento-large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .bento-wide {
-            grid-column: span 2;
-        }
-
-        .bento-tall {
-            grid-row: span 2;
-        }
-
-        /* Glassmorphic cards */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(40px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 32px;
-            padding: 56px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-        /* Animated icon containers */
-        .icon-container {
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            margin-bottom: 24px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .icon-container::before {
-            content: '';
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-150%) translateY(-150%) rotate(45deg); }
-            100% { transform: translateX(150%) translateY(150%) rotate(45deg); }
-        }
-
-        /* Section headers */
         .section-header {
             max-width: 980px;
             margin: 0 auto 80px;
@@ -365,30 +268,14 @@
             line-height: 1.5;
         }
 
-        /* Stats with counter animation */
-        .stat-number {
-            font-size: 64px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffffff, #d4d4d8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -3px;
-            margin-bottom: 12px;
-        }
-
-        .stat-label {
-            font-size: 17px;
-            color: #86868b;
-            font-weight: 500;
-        }
-
-        /* Education Section */
+        /* Education Grid */
         .education-grid {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
+            margin-bottom: 40px;
         }
 
         .education-card {
@@ -397,7 +284,6 @@
             border-radius: 32px;
             padding: 48px;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
         }
 
         .education-card:hover {
@@ -407,8 +293,32 @@
             box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
         }
 
-        .education-card .icon-container {
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
             margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-150%) translateY(-150%) rotate(45deg); }
+            100% { transform: translateX(150%) translateY(150%) rotate(45deg); }
         }
 
         .education-card h3 {
@@ -439,7 +349,47 @@
             color: #86868b;
         }
 
-        /* Achievement cards with micro-interactions */
+        /* Stats Grid */
+        .bento-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 32px;
+            padding: 48px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
+
+        .bento-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff, #d4d4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -3px;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 17px;
+            color: #86868b;
+            font-weight: 500;
+        }
+
+        /* Achievements */
         .achievements-grid {
             max-width: 1400px;
             margin: 0 auto;
@@ -454,8 +404,6 @@
             border-radius: 32px;
             padding: 48px;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            cursor: pointer;
         }
 
         .achievement-card:hover {
@@ -495,7 +443,22 @@
             transform: translateX(4px);
         }
 
-        /* Animated skill bars with glow */
+        /* Skills */
+        .skills-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+
+        .skill-category h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            letter-spacing: -0.5px;
+        }
+
         .skill-item {
             margin-bottom: 40px;
         }
@@ -524,46 +487,23 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 100px;
             overflow: hidden;
-            position: relative;
         }
 
         .skill-bar-fill {
             height: 100%;
             background: linear-gradient(90deg, #ffffff, #d4d4d8);
             border-radius: 100px;
-            position: relative;
             transform-origin: left;
             transform: scaleX(0);
             transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
 
-        .skill-bar-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
-            animation: skillShine 2s ease-in-out infinite;
-        }
-
-        @keyframes skillShine {
-            0% { transform: translateX(-100px); }
-            100% { transform: translateX(400px); }
-        }
-
         .skill-item.animate .skill-bar-fill {
             transform: scaleX(1);
         }
 
-        /* Projects with 3D tilt effect */
-        .projects-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
+        /* Projects */
         .project-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -666,7 +606,7 @@
             transform: translateY(-2px);
         }
 
-        /* Contact with hover effects */
+        /* Contact */
         .contact-grid {
             max-width: 900px;
             margin: 60px auto 0;
@@ -719,7 +659,18 @@
             font-weight: 600;
         }
 
-        /* Scroll reveal animations */
+        /* Footer */
+        footer {
+            padding: 60px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #86868b;
+            font-size: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Scroll animations */
         .reveal {
             opacity: 0;
             transform: translateY(60px);
@@ -731,20 +682,11 @@
             transform: translateY(0);
         }
 
-        /* Footer */
-        footer {
-            padding: 60px;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            color: #86868b;
-            font-size: 14px;
-        }
-
         /* Responsive */
         @media (max-width: 1200px) {
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
-            .bento-large, .bento-wide { grid-column: span 2; }
             .education-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -758,12 +700,10 @@
             .nav-links a { font-size: 13px; }
             section { padding: 80px 24px; }
             .bento-grid { grid-template-columns: 1fr; }
-            .bento-large, .bento-wide, .bento-tall { grid-column: span 1; grid-row: span 1; }
             .project-content { grid-template-columns: 1fr; }
             .achievements-grid { grid-template-columns: 1fr; }
             .cta-group { flex-direction: column; width: 100%; }
             .cta-primary, .cta-secondary { width: 100%; text-align: center; }
-            .education-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -802,15 +742,15 @@
             </p>
         </div>
         
-        <div class="education-grid reveal">
-            <div class="education-card">
+        <div class="education-grid">
+            <div class="education-card reveal">
                 <div class="icon-container">🎓</div>
                 <h3>SRM Easwari Engineering College</h3>
                 <div class="degree">B.E. in Computer Science (AI & ML)</div>
                 <div class="gpa">8.2</div>
                 <div class="gpa-label">CGPA / 10</div>
             </div>
-            <div class="education-card">
+            <div class="education-card reveal">
                 <div class="icon-container">🏛️</div>
                 <h3>IIT Madras</h3>
                 <div class="degree">BS in Data Science & Applications</div>
@@ -819,10 +759,10 @@
             </div>
         </div>
 
-        <div class="bento-grid" style="margin-top: 40px;">
+        <div class="bento-grid">
             <div class="bento-card reveal">
-                <div class="stat-number">20</div>
-                <div class="stat-label">Years Old</div>
+                <div class="stat-number">3rd</div>
+                <div class="stat-label">Year Student</div>
             </div>
             <div class="bento-card reveal">
                 <div class="stat-number">2+</div>
@@ -833,4 +773,48 @@
                 <div class="stat-label">Projects Built</div>
             </div>
             <div class="bento-card reveal">
-                <div class="stat-number">100+
+                <div class="stat-number">500+</div>
+                <div class="stat-label">GitHub Contributions</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Recognition</span>
+            <h2 class="section-title">Impact through innovation.</h2>
+        </div>
+        <div class="achievements-grid">
+            <div class="achievement-card reveal">
+                <div class="icon-container">🐛</div>
+                <h3>NVIDIA cuOpt Bug Discovery</h3>
+                <p>Discovered and reported a critical validation bug in NVIDIA's cuOpt Cloud API causing GPU crashes during multi-vehicle optimization. Provided detailed solution and documentation, officially acknowledged by NVIDIA.</p>
+                <a href="https://www.linkedin.com/pulse/reported-validation-bug-nvidia-cuopt-cloud-api-solver-siddhesh-ram-e7ykc" target="_blank" class="achievement-link">
+                    Read Article →
+                </a>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="icon-container">💼</div>
+                <h3>Data Analyst at RR Donnelley</h3>
+                <p>Currently working as a Data Analyst Intern, performing data cleaning, preprocessing, and visualization to derive actionable insights. Building automated dashboards and reports for strategic decision-making.</p>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="icon-container">🎯</div>
+                <h3>Joint Marketing Head</h3>
+                <p>Leading marketing initiatives for the CSE (AI & ML) Department at Easwari Engineering College. Coordinating departmental events and promotions to increase student engagement and visibility.</p>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="icon-container">🔬</div>
+                <h3>IIT Madras Data Science Program</h3>
+                <p>Pursuing BS in Data Science and Applications from IIT Madras with a focus on machine learning, data visualization, and statistical analysis. Currently at Diploma level with 7.88 CGPA.</p>
+                <a href="https://ds.study.iitm.ac.in/student/23F3000704" target="_blank" class="achievement-link">
+                    View Profile →
+                </a>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="icon-container">💻</div>
+                <h3>Open Source Contributions</h3>
+                <p>Active contributor on GitHub with consistent contributions to various projects. Passionate about building tools and solutions that help the developer community.</p>
+                <a href="https://github.com/Siddheshram05" target="_blank" class="achievement-link">
+                    View GitHub →
+                </a>
